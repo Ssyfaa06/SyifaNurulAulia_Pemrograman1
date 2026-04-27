@@ -1,0 +1,28 @@
+package p8;
+import java.util.Scanner;
+
+public class Tugas3p8 {
+    public static void main(String [] args) {
+        Scanner input = new Scanner(System.in);
+            char pilihan;
+            int total = 0;
+            int jumlahData = 0;
+        
+            do {
+                System.out.print("Masukkan nilai: ");
+                int nilai = input.nextInt();
+
+                total += nilai;
+                jumlahData++;
+
+                System.out.print("Tambah nilai lagi? (y/t): ");
+                pilihan = input.next().charAt(0);
+
+
+            }while (pilihan == 'y' || pilihan == 'Y');
+
+            double rataRata = (double) total /  jumlahData;
+            System.out.println("Rata-rata nilai: " + rataRata);
+        }
+    }
+
